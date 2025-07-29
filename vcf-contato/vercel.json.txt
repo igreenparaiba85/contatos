@@ -1,5 +1,12 @@
 {
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Content-Disposition": "attachment; filename=rodrigo-igreen.vcf",
+        "Content-Type": "text/vcard"
+      },
+      "dest": "/$1"
+    }
   ]
 }
